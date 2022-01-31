@@ -2,13 +2,20 @@ $(document).ready(function () {
 
 });
 
+function compare() {
+    searchFirstUA();
+    searchSecondUA();
+}
+
 function searchFirstUA() {
     var firstSearchParam = $('#firstUASearch').val();
 
     $.ajax({
         type: "GET",
-        url: "https://api.teleport.org/api/cities/?search=" + firstSearchParam,
-        success: 
+        url: "https://api.teleport.org/api/urban_areas/slug:" + firstSearchParam + "/scores/",
+        success: function (data) {
+            var urban1
+        }
     })
 }
 
@@ -17,7 +24,7 @@ function searchSecondUA() {
 
     $.ajax({
         type: "GET",
-        url: "https://api.teleport.org/api/cities/?search=" + secondSearchParam,
+        url: "https://api.teleport.org/api/urban_areas/slug:" + secondSearchParam + "/scores/",
         success: 
     })
 }
