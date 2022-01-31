@@ -19,21 +19,31 @@
 <body>
     <div class="container">
         <div class="row" id="headerDiv">
-            <h1>Urban Comparison</h1>
+            <div class="col-md-12">
+                <h1>Urban Comparison</h1>
+            </div>
         </div>
 
         <ul class="list-group" id="errorMessages"></ul>
 
-        <div class="row">
-            <div class="col-md-10">
+        <div class="col-md-12">
+            <div class="row">
                 <div class="col-md-5" id="urban1Div">
-                    <h2>Urban Area 1</h2>
+                    <form>
+                        <label for="firstUASearch"><strong>Urban Area: </strong></label>
+                        <input class="form-control" id="firstUASearch" name="firstUASearch"
+                            placeholder="City, State"></select>
+                    </form>
+                    <button class="btn btn-primary" id="compare">Compare</button>
                 </div>
                 <div class="col-md-5" id="urban2Div">
-                    <h2>Urban Area 2</h2>
+                    <form id="secondUA">
+                        <label for="secondUASearch"><strong>Compare To: </strong></label>
+                        <input class="form-control" id="secondUASearch" name="secondUASearch"
+                            placeholder="City, State"></select>
+                    </form>
                 </div>
             </div>
-
         </div>
     </div>
 
