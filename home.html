@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Weather</title>
+    <title>Urban Comparison</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -31,21 +31,54 @@
                 <div class="col-md-5" id="urban1Div">
                     <form>
                         <label for="firstUASearch"><strong>Urban Area: </strong></label>
-                        <input class="form-control" id="firstUASearch" name="firstUASearch"
-                            placeholder="City, State"></select>
+                        <input class="form-control" id="firstUASearch" name="firstUASearch" placeholder="city"></select>
                     </form>
-                    <button class="btn btn-primary" id="compare" onclick="compare()">Compare</button>
                 </div>
                 <div class="col-md-5" id="urban2Div">
-                    <form id="secondUA">
+                    <form>
                         <label for="secondUASearch"><strong>Compare To: </strong></label>
                         <input class="form-control" id="secondUASearch" name="secondUASearch"
-                            placeholder="City, State"></select>
+                            placeholder="city"></select>
                     </form>
                 </div>
             </div>
+            <div class="row">
+                <button class="btn btn-primary" id="compare" onclick="compare()">Compare</button>
+            </div>
         </div>
     </div>
+    <hr>
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-5" id=search1Div>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <td><strong>Category Name</strong></td>
+                            <td><strong>Score(out of 10)</strong></td>
+                        </tr>
+                    </thead>
+                    <tbody id="search1Table">
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-5" id=search2Div>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <td><strong>Category Name</strong></td>
+                            <td><strong>Score(out of 10)</strong></td>
+                        </tr>
+                    </thead>
+                    <tbody id="search2Table">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <!-- use the the full jQuery build, NOT the slim build-->
