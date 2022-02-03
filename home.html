@@ -18,8 +18,8 @@
 
 <body>
     <div class="container">
-        <div class="row" id="headerDiv">
-            <div class="col-md-12">
+        <div class="col-md-12" id="headerDiv">
+            <div class="row">
                 <h1>Urban Comparison</h1>
             </div>
         </div>
@@ -30,55 +30,59 @@
             <div class="row">
                 <div class="col-md-5" id="urban1Div">
                     <form>
-                        <label for="firstUASearch"><strong>Urban Area: </strong></label>
+                        <label for="firstUASearch" id="firstUALabel"><strong>Urban Area: </strong></label>
                         <input class="form-control" id="firstUASearch" name="firstUASearch" placeholder="city"></select>
                     </form>
                 </div>
                 <div class="col-md-5" id="urban2Div">
                     <form>
-                        <label for="secondUASearch"><strong>Compare To: </strong></label>
+                        <label for="secondUASearch" id="secondUALabel"><strong>Compare To: </strong></label>
                         <input class="form-control" id="secondUASearch" name="secondUASearch"
                             placeholder="city"></select>
                     </form>
                 </div>
             </div>
-            <div class="row">
-                <button class="btn btn-primary" id="compare" onclick="compare()">Compare</button>
-            </div>
         </div>
-    </div>
-    <hr>
-    <div class="col-md-12">
+
         <div class="row">
-            <div class="col-md-5" id=search1Div>
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <td><strong>Category Name</strong></td>
-                            <td><strong>Score(out of 10)</strong></td>
-                        </tr>
-                    </thead>
-                    <tbody id="search1Table">
-
-                    </tbody>
-                </table>
+            <div class="col-md-12">
+                <button class="btn btn-primary" id="compare" onclick="validate()">Compare</button>
             </div>
-            <div class="col-md-5" id=search2Div>
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <td><strong>Category Name</strong></td>
-                            <td><strong>Score(out of 10)</strong></td>
-                        </tr>
-                    </thead>
-                    <tbody id="search2Table">
 
-                    </tbody>
-                </table>
+        </div>
+        <hr>
+
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-5" id=search1Div>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <td><strong>Category Name</strong></td>
+                                <td><strong>Score(out of 10)</strong></td>
+                            </tr>
+                        </thead>
+                        <tbody id="search1Table">
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-5" id=search2Div>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <td><strong>Category Name</strong></td>
+                                <td><strong>Score(out of 10)</strong></td>
+                            </tr>
+                        </thead>
+                        <tbody id="search2Table">
+
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
-
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <!-- use the the full jQuery build, NOT the slim build-->
