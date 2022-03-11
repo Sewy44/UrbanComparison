@@ -12,8 +12,8 @@ function compare() {
 }
 
 function validate() {
-    var firstUrbanArea = $('#firstUASearch').val();
-    var secondUrbanArea = $('#secondUASearch').val();
+    let firstUrbanArea = $('#firstUASearch').val();
+    let secondUrbanArea = $('#secondUASearch').val();
 
     $('.error').remove();
     if (firstUrbanArea.length < 1) {
@@ -29,15 +29,15 @@ function validate() {
 
 function searchFirstUA() {
 
-    var firstSearchParam = $('#firstUASearch').val().toLowerCase();
-    var searchOne = $('#search1Table');
+    let firstSearchParam = $('#firstUASearch').val().toLowerCase();
+    let searchOne = $('#search1Table');
 
     $.ajax({
         type: "GET",
         url: "https://api.teleport.org/api/urban_areas/slug:" + firstSearchParam + "/scores/",
         success: function (dataArray) {
             $('#search1Div').show();
-            var content = '<tr><td>' + dataArray.categories[1].name + '</td><td>' + dataArray.categories[1].score_out_of_10.toFixed(2) + '</td></tr>' +
+            let content = '<tr><td>' + dataArray.categories[1].name + '</td><td>' + dataArray.categories[1].score_out_of_10.toFixed(2) + '</td></tr>' +
                 '<tr><td>' + dataArray.categories[7].name + '</td><td>' + dataArray.categories[7].score_out_of_10.toFixed(2) + '</td></tr>' +
                 '<tr><td>' + dataArray.categories[8].name + '</td><td>' + dataArray.categories[8].score_out_of_10.toFixed(2) + '</td></tr>' +
                 '<tr><td>' + dataArray.categories[10].name + '</td><td>' + dataArray.categories[10].score_out_of_10.toFixed(2) + '</td></tr>' +
@@ -54,15 +54,15 @@ function searchFirstUA() {
 }
 
 function searchSecondUA() {
-    var secondSearchParam = $('#secondUASearch').val().toLowerCase();
-    var searchTwo = $('#search2Table');
+    let secondSearchParam = $('#secondUASearch').val().toLowerCase();
+    let searchTwo = $('#search2Table');
 
     $.ajax({
         type: "GET",
         url: "https://api.teleport.org/api/urban_areas/slug:" + secondSearchParam + "/scores/",
         success: function (dataArray) {
             $('#search2Div').show();
-            var content = '<tr><td>' + dataArray.categories[1].name + '</td><td>' + dataArray.categories[1].score_out_of_10.toFixed(2) + '</td></tr>' +
+            let content = '<tr><td>' + dataArray.categories[1].name + '</td><td>' + dataArray.categories[1].score_out_of_10.toFixed(2) + '</td></tr>' +
                 '<tr><td>' + dataArray.categories[7].name + '</td><td>' + dataArray.categories[7].score_out_of_10.toFixed(2) + '</td></tr>' +
                 '<tr><td>' + dataArray.categories[8].name + '</td><td>' + dataArray.categories[8].score_out_of_10.toFixed(2) + '</td></tr>' +
                 '<tr><td>' + dataArray.categories[10].name + '</td><td>' + dataArray.categories[10].score_out_of_10.toFixed(2) + '</td></tr>' +
